@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CloudDrive | Cloud File Storage</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hidden {
+            display: none !important;
+        }
+
+        .switch-text {
+            text-align: center;
+            margin-top: 20px;
+            color: #9ab7a5;
+        }
+
+        .switch-text a {
+            color: #35ff91;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .switch-text a:hover {
+            text-decoration: underline;
+        }
+
+        .password-note {
+            font-size: 12px;
+            color: #789684;
+            margin: -10px 0 15px 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Animated space background -->
+    <div class="space-background">
+        <div class="stars stars-one"></div>
+        <div class="stars stars-two"></div>
+
+        <div class="shooting-star shooting-one"></div>
+        <div class="shooting-star shooting-two"></div>
+        <div class="shooting-star shooting-three"></div>
+        <div class="shooting-star shooting-four"></div>
+        <div class="shooting-star shooting-five"></div>
+
+        <div class="planet"></div>
+    </div>
+
+
+    <!-- Security badge -->
+    <div class="security-badge">
+        <span class="security-dot"></span>
+        Secure &amp; Private
+    </div>
+
+
+    <!-- Main application -->
+    <main class="container">
+
+        <section class="card">
+
+            <!-- Brand -->
+            <div class="brand">
+
+                <div class="cloud-logo">
+                    ☁
+                </div>
+
+                <h1>
+                    Cloud<span>Drive</span>
+                </h1>
+
+                <p class="tagline">
+                    YOUR FILES &nbsp;•&nbsp; ANYWHERE &nbsp;•&nbsp; ALWAYS SAFE
+                </p>
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- SIGN UP PANEL - FIRST PAGE -->
+            <!-- ========================= -->
+
+            <div class="login-panel" id="signupPanel">
+
+                <h2>Create Account</h2>
+
+                <p class="login-subtitle">
+                    Create your CloudDrive account
+                </p>
+
+
+                <form id="signupForm">
+
+                    <!-- Email -->
+                    <div class="input-group">
+
+                        <span class="input-icon">✉</span>
+
+                        <input
+                            type="email"
+                            id="signupEmail"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="input-group">
+
+                        <span class="input-icon">♙</span>
+
+                        <input
+                            type="password"
+                            id="signupPassword"
+                            placeholder="Create a password"
+                            required
+                        >
+
+                    </div>
+
+                    <p class="password-note">
+                        Password must be at least 6 characters.
+                    </p>
+
+
+                    <!-- Confirm Password -->
+                    <div class="input-group">
+
+                        <span class="input-icon">♙</span>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm your password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Sign Up -->
+                    <button
+                        type="submit"
+                        class="login-button"
+                    >
+                        <span>Create Account</span>
+                        <span class="arrow">→</span>
+                    </button>
+
+                </form>
+
+
+                <!-- Switch to Login -->
+                <p class="switch-text">
+
+                    Already have an account?
+
+                    <a href="#" id="showLogin">
+                        Login
+                    </a>
+
+                </p>
+
+
+                <!-- Features -->
+                <div class="features">
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            ☁
+                        </div>
+
+                        <strong>Store Files</strong>
+
+                        <small>Safely</small>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            ⟳
+                        </div>
+
+                        <strong>Access</strong>
+
+                        <small>Anywhere</small>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            ♢
+                        </div>
+
+                        <strong>100%</strong>
+
+                        <small>Secure</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- LOGIN PANEL -->
+            <!-- ========================= -->
+
+            <div
+                class="login-panel hidden"
+                id="loginPanel"
+            >
+
+                <h2>Welcome Back</h2>
+
+                <p class="login-subtitle">
+                    Login to access your files
+                </p>
+
+
+                <form id="loginForm">
+
+                    <!-- Email -->
+                    <div class="input-group">
+
+                        <span class="input-icon">✉</span>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="input-group">
+
+                        <span class="input-icon">♙</span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Login -->
+                    <button
+                        type="submit"
+                        class="login-button"
+                    >
+                        <span>Login</span>
+                        <span class="arrow">→</span>
+                    </button>
+
+                </form>
+
+
+                <!-- Switch to Sign Up -->
+                <p class="switch-text">
+
+                    Don't have an account?
+
+                    <a href="#" id="showSignup">
+                        Sign Up
+                    </a>
+
+                </p>
+
+
+                <!-- Features -->
+                <div class="features">
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            ☁
+                        </div>
+
+                        <strong>Store Files</strong>
+
+                        <small>Safely</small>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            ⟳
+                        </div>
+
+                        <strong>Access</strong>
+
+                        <small>Anywhere</small>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            ♢
+                        </div>
+
+                        <strong>100%</strong>
+
+                        <small>Secure</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <div class="footer-text">
+
+        <span></span>
+
+        CLOUD STORAGE REIMAGINED
+
+        <span></span>
+
+    </div>
+
+
+    <!-- Messages -->
+    <p id="message"></p>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

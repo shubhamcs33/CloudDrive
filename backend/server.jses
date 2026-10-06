@@ -1,0 +1,44 @@
+
+/* =========================================================
+   REMOVE SHARE
+========================================================= */
+
+app.delete(
+    "/share/:id",
+    async (req, res) => {
+        try {
+            const share =
+                await Permission.findById(
+                    req.params.id
+                );
+
+            if (!share) {
+                return res.status(404).json({
+                    message:
+                        "Share permission not found."
+                });
+            }
+
+            await Permission.deleteOne({
+                _id:
+                    req.params.id
+            });
+
+            res.json({
+                message:
+                    "Share permission removed."
+            });
+
+        } catch (error) {
+            console.error(
+                "Remove share error:",
+                error
+            );
+
+            res.status(500).json({
+                message:
+                    "Could not remove share."
+            });
+        }
+    }
+);
